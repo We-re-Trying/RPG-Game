@@ -15,7 +15,7 @@ public class AttackTarget : MonoBehaviour
     private float minDefenseMultiplier;
     [SerializeField]
     private float maxDefenseMultiplier;
-  
+    
     public void hit (GameObject target) 
     {
         UnitStats ownerStats = this.owner.GetComponent<UnitStats>();
@@ -31,4 +31,21 @@ public class AttackTarget : MonoBehaviour
             ownerStats.mana -= this.manaCost;
         }
     }
+    
+    public void receiveDamage (float damage) 
+    {
+    this.health -= damage;
+    animator.Play("Hit");
+    GameObject HUDCanvas = GameObject.Find("HUDCanvas");
+    GameObject damageText = Instantiate(this.damageTextPrefab, HUDCanvas.transform) as GameObject;
+    damageText.GetComponent<Text>().text = "" + damage;
+    damageText.transform.localPosition = this.damageTextPosition;
+    damageText.transform.localScale = new Vector2(1.0f, 1.0f);
+    if(this.health <= 0)
+    {
+        this.dead = true;
+        this.gameObject.tag = "DeadUnit";
+        Destroy(this.gameObject);
+    }
+}
 }
