@@ -138,14 +138,14 @@ public class PlayerMovement : MonoBehaviour
 
     public void isAttackingOn()
     {
-        //Debug.Log("isAttackingOn()");
+        Debug.Log("isAttackingOn()");
         isAttacking = true;
-        Invoke("isAttackingOff", 1f); // Failsafe
+        //Invoke("isAttackingOff", 1f); // Failsafe
     }
 
     public void isAttackingOff()
     {
-        //Debug.Log("isAttackingOff()");
+        Debug.Log("isAttackingOff()");
         isAttacking = false;
     }
 }

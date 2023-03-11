@@ -12,10 +12,11 @@ GameObject:
   - component: {fileID: 335627278848396153}
   - component: {fileID: 335627278848396150}
   - component: {fileID: 335627278848396151}
+  - component: {fileID: 7156122617339415106}
   - component: {fileID: 335627278848396155}
   - component: {fileID: -7883992688731990811}
   m_Layer: 0
-  m_Name: Player
+  m_Name: Max
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -135,6 +136,19 @@ MonoBehaviour:
   expThreshold: 100
   healthIncrease: 5
   strIncrease: 1
+--- !u!114 &7156122617339415106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 335627278848396148}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c0c6b3666ee4bb45bbe1cdf683f6763, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
 --- !u!95 &335627278848396155
 Animator:
   serializedVersion: 5
