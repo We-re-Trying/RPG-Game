@@ -229,7 +229,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8234421604011645851}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d0367f030670c494ab4ac0ac9924204f, type: 3}
   m_Name: 
@@ -237,6 +237,8 @@ MonoBehaviour:
   speed: 5
   animator: {fileID: 8234421604011645844}
   rb: {fileID: 0}
+  partner: {fileID: 335627278848396148, guid: ab6cd71dd957f1648bb0d0874a81032c, type: 3}
+  mainCamera: {fileID: 6166040262715697210, guid: baf195085d7c8234f81a111cf127b2f6, type: 3}
   isAttacking: 0
   hitBoxSize: {x: 0.5, y: 0.5}
   hitBoxLocation: {x: 0, y: 0}
@@ -254,12 +256,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8234421604011645851}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9c0c6b3666ee4bb45bbe1cdf683f6763, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerTransform: {fileID: 0}
+  playerTransform: {fileID: 335627278848396152, guid: ab6cd71dd957f1648bb0d0874a81032c, type: 3}
   followDistance: 2
   followSpeed: 5
   followSmoothness: 1

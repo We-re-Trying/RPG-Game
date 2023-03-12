@@ -10,6 +10,10 @@ public class PlayerMovement : MonoBehaviour
     private Animator animator;
     [SerializeField]
     Rigidbody2D rb;
+    [SerializeField]
+    private GameObject partner;
+    [SerializeField]
+    private GameObject mainCamera;
 
     public bool isAttacking = false;
     private Collider2D hitBox;
@@ -51,6 +55,7 @@ public class PlayerMovement : MonoBehaviour
 
 
         attack();
+        switchControl();
         animate();
     }
 
@@ -73,6 +78,18 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetButtonDown("Fire1"))
         {
             animator.SetTrigger("Attack");
+        }
+    }
+
+    public void switchControl()
+    {
+        if (Input.GetButtonDown("Fire2"))
+        {
+            partner.GetComponent<PartnerFollow>().enabled = false;
+            partner.GetComponent<PlayerMovement>().enabled = true;
+            mainCamera.GetComponent<MainCamera>().player = partner;
+            gameObject.GetComponent<PartnerFollow>().enabled = true;
+            gameObject.GetComponent<PlayerMovement>().enabled = false;
         }
     }
 

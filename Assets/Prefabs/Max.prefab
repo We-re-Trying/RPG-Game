@@ -126,6 +126,8 @@ MonoBehaviour:
   speed: 5
   animator: {fileID: 335627278848396155}
   rb: {fileID: 0}
+  partner: {fileID: 8234421604011645851, guid: bdc3e73876862a64ea09885c59c08590, type: 3}
+  mainCamera: {fileID: 6166040262715697210, guid: baf195085d7c8234f81a111cf127b2f6, type: 3}
   isAttacking: 0
   hitBoxSize: {x: 0.5, y: 0.5}
   hitBoxLocation: {x: 0, y: 0}
@@ -148,7 +150,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c0c6b3666ee4bb45bbe1cdf683f6763, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  playerTransform: {fileID: 8234421604011645847, guid: bdc3e73876862a64ea09885c59c08590, type: 3}
+  followDistance: 2
+  followSpeed: 5
+  followSmoothness: 1
 --- !u!95 &335627278848396155
 Animator:
   serializedVersion: 5
