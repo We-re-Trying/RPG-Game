@@ -19,7 +19,8 @@ public class PlayerMovement : MonoBehaviour
     private Collider2D hitBox;
     public Vector2 hitBoxSize = new Vector2(.5f, .5f), hitBoxLocation;
 
-    public int currentHealth;
+    public int level = 1;
+    public int currentHealth = 20;
     public int maxHealth = 20;
     public int str = 1;
 
@@ -27,6 +28,8 @@ public class PlayerMovement : MonoBehaviour
     public int expThreshold = 100;
     public int healthIncrease = 5;
     public int strIncrease = 1;
+
+    public int gold;
 
     private float moveHorizontal, moveVertical;
     Vector2 currentVelocity;
@@ -36,8 +39,7 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
 
         // Probably need to change these for scene transitions
-        currentHealth = maxHealth; 
-        exp = 0;
+        //currentHealth = maxHealth; 
     }
 
     private void Update()
@@ -155,14 +157,13 @@ public class PlayerMovement : MonoBehaviour
 
     public void isAttackingOn()
     {
-        Debug.Log("isAttackingOn()");
+        //Debug.Log("isAttackingOn()");
         isAttacking = true;
-        //Invoke("isAttackingOff", 1f); // Failsafe
     }
 
     public void isAttackingOff()
     {
-        Debug.Log("isAttackingOff()");
+        //Debug.Log("isAttackingOff()");
         isAttacking = false;
     }
 }

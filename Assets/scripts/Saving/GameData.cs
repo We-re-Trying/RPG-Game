@@ -1,0 +1,22 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+[System.Serializable]
+public class GameData
+{
+    //public Inventory inventory;
+    public int partyGold, currentFloor;
+    public int maxLevel, maxExp, maxMaxHealth, maxCurrentHealth, maxStr,
+               luciaLevel, luciaExp, luciaMaxHealth, luciaCurrentHealth, luciaStr;
+    
+    public GameData()
+    {
+        this.partyGold = 0; this.currentFloor = 1; 
+        this.maxLevel = 1; this.maxExp = 0; this.maxMaxHealth = 20;
+        this.maxCurrentHealth = 20; this.maxStr = 1;
+
+        this.luciaLevel = 1; this.luciaExp = 0; this.luciaMaxHealth = 20;
+        this.luciaCurrentHealth = 20; this.luciaStr = 1;
+    }
+}
