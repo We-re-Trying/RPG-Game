@@ -45,7 +45,7 @@ TagManager:
     locked: 0
   - name: trees
     uniqueID: 577515563
-    locked: 0
+    locked: 1
   - name: floor
     uniqueID: 4000965429
     locked: 0
