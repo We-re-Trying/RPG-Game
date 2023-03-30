@@ -19,7 +19,12 @@ public class SaveLoadManager : MonoBehaviour
     {
         Debug.Log("Saving game.");
         this.gameData = new GameData();
-        gameData.maxLevel = max.level; gameData.luciaLevel = lucia.level;
+        //gameData.inventory = inventory.inventory;
+        //gameData.partyGold = inventory.gold; gameData.currentFloor = gameManager.currentFloor;
+        gameData.maxLevel = max.level; gameData.maxExp = max.exp; gameData.maxMaxHealth = max.maxHealth; 
+        gameData.maxCurrentHealth = max.currentHealth; gameData.maxStr = max.str; gameData.luciaLevel = lucia.level; 
+        gameData.luciaExp = lucia.exp; gameData.luciaMaxHealth = lucia.maxHealth; 
+        gameData.luciaCurrentHealth = lucia.currentHealth; gameData.luciaStr = lucia.str; gameData.luciaLevel = lucia.level;
 
         string json = JsonUtility.ToJson(gameData);
 
@@ -36,7 +41,12 @@ public class SaveLoadManager : MonoBehaviour
 
             gameData = JsonUtility.FromJson<GameData>(jsonString);
 
-            max.level = gameData.maxLevel; lucia.level = gameData.luciaLevel;
+            //inventory.inventory = gameData.inventory;
+            //inventory.gold = gameData.partyGold; gameManager.currentFloor = gameData.currentFloor;
+            max.level = gameData.maxLevel; max.exp = gameData.maxExp; max.maxHealth = gameData.maxMaxHealth; 
+            max.currentHealth = gameData.maxCurrentHealth; max.str = gameData.maxStr; lucia.level = gameData.luciaLevel;
+            lucia.exp = gameData.luciaExp; lucia.maxHealth = gameData.luciaMaxHealth;
+            lucia.currentHealth = gameData.luciaCurrentHealth; lucia.str = gameData.luciaStr; lucia.level = gameData.luciaLevel;
         }
     }
 
