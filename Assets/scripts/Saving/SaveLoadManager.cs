@@ -9,7 +9,7 @@ public class SaveLoadManager : MonoBehaviour
     public PlayerMovement max, lucia;
     public static SaveLoadManager instance { get; private set; }
 
-    public void NewGame()
+    public void newGame()
     {
         Debug.Log("Loading new game.");
         this.gameData = new GameData();
@@ -57,5 +57,9 @@ public class SaveLoadManager : MonoBehaviour
             Debug.LogError("More than one SaveLoadManager in scene.");
         }
         instance = this;
+    }
+    public static SaveLoadManager GetInstance()
+    {
+        return instance;
     }
 }
