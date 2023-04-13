@@ -12,6 +12,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Yeaston.unity
     guid: 110f57b433f78e841b564cb81d76e209
   - enabled: 1
-    path: Assets/Scenes/dungeon_fight_scene.unity
+    path: Assets/Scenes/2nd_dungeon_level.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   m_configObjects: {}
