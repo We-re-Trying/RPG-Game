@@ -4211,6 +4211,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: GOOP
       objectReference: {fileID: 0}
+    - target: {fileID: 3333166300577140445, guid: 2a8823b22f674a54bb2acdd1abab5fd2, type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3333166300577140445, guid: 2a8823b22f674a54bb2acdd1abab5fd2, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3333166300577140446, guid: 2a8823b22f674a54bb2acdd1abab5fd2, type: 3}
       propertyPath: m_SortingOrder
       value: 0
