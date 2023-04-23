@@ -23,6 +23,7 @@ public class PlayerMovement : MonoBehaviour
     public int currentHealth = 20;
     public int maxHealth = 20;
     public int str = 1;
+    public HealthBar healthBar;
 
     public int exp;
     public int expThreshold = 100;
@@ -39,7 +40,8 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
 
         // Probably need to change these for scene transitions
-        //currentHealth = maxHealth; 
+        currentHealth = maxHealth;
+        healthBar.SetMaxHealth(maxHealth);
     }
 
     private void Update()
@@ -99,10 +101,11 @@ public class PlayerMovement : MonoBehaviour
     {
         currentHealth -= damage;
 
-        if (currentHealth <= 0)
+        healthBar.SetHealth(currentHealth);
+        /*if (currentHealth <= 0)
         {
             gameObject.SetActive(false);
-        }
+        } */
     }
 
     public void addExp(int expGains)
