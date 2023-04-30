@@ -372,6 +372,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Max
       objectReference: {fileID: 0}
+    - target: {fileID: 335627278848396150, guid: ab6cd71dd957f1648bb0d0874a81032c, type: 3}
+      propertyPath: m_Mass
+      value: 0.0001
+      objectReference: {fileID: 0}
+    - target: {fileID: 335627278848396150, guid: ab6cd71dd957f1648bb0d0874a81032c, type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 335627278848396150, guid: ab6cd71dd957f1648bb0d0874a81032c, type: 3}
+      propertyPath: m_Simulated
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 335627278848396151, guid: ab6cd71dd957f1648bb0d0874a81032c, type: 3}
       propertyPath: partner
       value: 
@@ -428,6 +440,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7156122617339415106, guid: ab6cd71dd957f1648bb0d0874a81032c, type: 3}
+      propertyPath: playerRB
+      value: 
+      objectReference: {fileID: 1990857159}
     - target: {fileID: 7156122617339415106, guid: ab6cd71dd957f1648bb0d0874a81032c, type: 3}
       propertyPath: playerTransform
       value: 
@@ -5121,6 +5137,10 @@ PrefabInstance:
       propertyPath: mainCamera
       value: 
       objectReference: {fileID: 519420028}
+    - target: {fileID: 8234421604011645849, guid: bdc3e73876862a64ea09885c59c08590, type: 3}
+      propertyPath: m_Mass
+      value: 0.0001
+      objectReference: {fileID: 0}
     - target: {fileID: 8234421604011645851, guid: bdc3e73876862a64ea09885c59c08590, type: 3}
       propertyPath: m_Name
       value: Lucia
@@ -8807,6 +8827,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0367f030670c494ab4ac0ac9924204f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!50 &1990857159 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 8234421604011645849, guid: bdc3e73876862a64ea09885c59c08590, type: 3}
+  m_PrefabInstance: {fileID: 1233976837}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2034807332
 GameObject:
   m_ObjectHideFlags: 0

@@ -131,13 +131,16 @@ MonoBehaviour:
   isAttacking: 0
   hitBoxSize: {x: 0.5, y: 0.5}
   hitBoxLocation: {x: 0, y: 0}
+  level: 1
   currentHealth: 0
   maxHealth: 20
   str: 1
+  healthBar: {fileID: 0}
   exp: 0
   expThreshold: 100
   healthIncrease: 5
   strIncrease: 1
+  gold: 0
 --- !u!114 &7156122617339415106
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -150,10 +153,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c0c6b3666ee4bb45bbe1cdf683f6763, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  numFrames: 10
+  rb: {fileID: 0}
+  animator: {fileID: 0}
   playerTransform: {fileID: 8234421604011645847, guid: bdc3e73876862a64ea09885c59c08590, type: 3}
-  followDistance: 2
-  followSpeed: 5
-  followSmoothness: 1
+  playerRB: {fileID: 0}
 --- !u!95 &335627278848396155
 Animator:
   serializedVersion: 5
@@ -187,7 +191,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.26284757}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -198,7 +202,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.65, y: 1.05}
+  m_Size: {x: 0.65, y: 0.5243048}
   m_EdgeRadius: 0
 --- !u!1 &6305203748998903631
 GameObject:
