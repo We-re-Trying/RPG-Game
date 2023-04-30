@@ -44,6 +44,11 @@ public class PlayerMovement : MonoBehaviour
         healthBar.SetMaxHealth(maxHealth);
     }
 
+    private void OnEnable()
+    {
+        gameObject.GetComponent<BoxCollider2D>().isTrigger = false;
+    }
+
     private void Update()
     {
         if (!isAttacking)

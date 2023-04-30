@@ -356,6 +356,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0367f030670c494ab4ac0ac9924204f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!50 &383813834 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 335627278848396150, guid: ab6cd71dd957f1648bb0d0874a81032c, type: 3}
+  m_PrefabInstance: {fileID: 414733414}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &414733414
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5044,6 +5049,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1558613199710689965, guid: bdc3e73876862a64ea09885c59c08590, type: 3}
+      propertyPath: playerRB
+      value: 
+      objectReference: {fileID: 383813834}
     - target: {fileID: 1558613199710689965, guid: bdc3e73876862a64ea09885c59c08590, type: 3}
       propertyPath: m_Enabled
       value: 1
