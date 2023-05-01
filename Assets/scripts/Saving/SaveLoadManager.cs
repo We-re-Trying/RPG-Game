@@ -6,6 +6,7 @@ using System.IO;
 public class SaveLoadManager : MonoBehaviour
 {
     private GameData gameData;
+    public GameManager gameManager;
     public PlayerMovement max, lucia;
     public static SaveLoadManager instance { get; private set; }
 
@@ -20,7 +21,8 @@ public class SaveLoadManager : MonoBehaviour
         Debug.Log("Saving game.");
         this.gameData = new GameData();
         //gameData.inventory = inventory.inventory;
-        //gameData.partyGold = inventory.gold; gameData.currentFloor = gameManager.currentFloor;
+        //gameData.partyGold = inventory.gold;
+        gameData.currentFloor = gameManager.currentFloor;
         gameData.maxLevel = max.level; gameData.maxExp = max.exp; gameData.maxMaxHealth = max.maxHealth; 
         gameData.maxCurrentHealth = max.currentHealth; gameData.maxStr = max.str; gameData.luciaLevel = lucia.level; 
         gameData.luciaExp = lucia.exp; gameData.luciaMaxHealth = lucia.maxHealth; 
@@ -42,7 +44,8 @@ public class SaveLoadManager : MonoBehaviour
             gameData = JsonUtility.FromJson<GameData>(jsonString);
 
             //inventory.inventory = gameData.inventory;
-            //inventory.gold = gameData.partyGold; gameManager.currentFloor = gameData.currentFloor;
+            //inventory.gold = gameData.partyGold;
+            gameManager.currentFloor = gameData.currentFloor;
             max.level = gameData.maxLevel; max.exp = gameData.maxExp; max.maxHealth = gameData.maxMaxHealth; 
             max.currentHealth = gameData.maxCurrentHealth; max.str = gameData.maxStr; lucia.level = gameData.luciaLevel;
             lucia.exp = gameData.luciaExp; lucia.maxHealth = gameData.luciaMaxHealth;

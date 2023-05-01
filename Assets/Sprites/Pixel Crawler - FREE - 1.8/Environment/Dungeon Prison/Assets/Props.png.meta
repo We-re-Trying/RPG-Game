@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -70,7 +70,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -1843,7 +1843,6 @@ TextureImporter:
       Props_55: 541822891
       Props_56: -1732878852
       Props_80: -805727210
-      Props_74: -1171704976
       Props_26: -1852357218
       Props_2: -559233205
       Props_70: -333326074
@@ -1872,8 +1871,8 @@ TextureImporter:
       Props_15: -1060301577
       Props_28: -419595954
       Props_49: 2083248892
-      Props_54: -1825806545
       Props_71: 510266593
+      Props_54: -1825806545
       Props_12: -1560946453
       Props_40: 2059118858
       Props_29: 56176096
@@ -1882,22 +1881,23 @@ TextureImporter:
       Props_1: -1061161854
       Props_0: 1864873584
       Props_32: 1249925266
+      Props_76: 262797186
       Props_5: 1221109876
       Props_24: -2105070056
       Props_13: 1352239607
-      Props_34: -550916046
       Props_19: 393951087
+      Props_34: -550916046
       Props_20: 638400405
       Props_46: -769174808
-      Props_51: 1738240661
       Props_37: -125834924
       Props_31: -950809819
+      Props_51: 1738240661
       Props_81: 1507661329
       Props_36: -1390333793
       Props_41: -80072950
       Props_22: 475639177
-      Props_23: -1426566450
       Props_7: 64349348
+      Props_23: -1426566450
       Props_47: -264545442
       Props_8: -1570395854
       Props_67: 1720761150
@@ -1907,18 +1907,18 @@ TextureImporter:
       Props_3: -1527694385
       Props_57: 1281784219
       Props_16: -953859332
-      Props_68: 924971594
+      Props_74: -1171704976
       Props_61: -897734198
       Props_30: 51103428
       Props_62: 65810019
+      Props_68: 924971594
       Props_66: 945558379
       Props_11: 1376414937
-      Props_14: 1954718803
       Props_21: -341242672
+      Props_14: 1954718803
       Props_35: -142379372
       Props_9: 838295981
       Props_79: 760991041
-      Props_76: 262797186
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
