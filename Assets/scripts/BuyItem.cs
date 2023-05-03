@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class BuyItem : MonoBehaviour
 {
-    // public Inventory inv;
-    // public Item type = new Item();
+    public Inventory inv;
+    public ItemBase type;
 
     private bool playerInRange = false;
     private Coroutine checkInputCoroutine;
@@ -35,8 +35,8 @@ public class BuyItem : MonoBehaviour
             if (Input.GetButtonDown("Interact"))
             {
                 Debug.Log("Press Interact.");
-                // inv.takeMoney(type.price);
-                // inv.add(type);
+                inv.takeMoney(type.price);
+                inv.slots.Add(type);
                 Destroy(gameObject);
             }
             yield return null;

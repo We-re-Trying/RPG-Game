@@ -5,11 +5,15 @@ using System;
 
 public class Inventory : MonoBehaviour
 {
-     [SerializeField] List<ItemSlot> slots;
+     public List<ItemBase> slots;
+
+	public void takeMoney(int price)
+    {
+		// do stuff
+    }
 }
 
-[Serializable]
-
+/*
 public class ItemSlot
 {
 	[SerializeField] ItemBase item;
@@ -19,4 +23,4 @@ public class ItemSlot
 
 	public int Count => count;
 }
-
+*/
