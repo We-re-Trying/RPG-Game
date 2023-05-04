@@ -5,11 +5,28 @@ using System;
 
 public class Inventory : MonoBehaviour
 {
-     public List<ItemBase> slots;
+     //public List<ItemBase> slots;
+     public List<ItemBase> items = new List<ItemBase>();
+     public int money = 500;
+
+     public void AddItem(ItemBase item)
+     {
+	     items.Add(item);
+     }
+
+     public void RemoveItem(ItemBase item)
+     {
+	     items.Remove(item);
+     }
+
+     public void addMoney(int price)
+     {
+	     money += price;
+     }
 
 	public void takeMoney(int price)
     {
-		// do stuff
+	    money -= price;
     }
 }
 
