@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class BuyItem : MonoBehaviour
 {
-    //public Inventory inv;
-    //public ItemBase type;
+    public Inventory inv;
+    public ItemBase type;
 
     private bool playerInRange = false;
     private Coroutine checkInputCoroutine;
@@ -28,6 +28,36 @@ public class BuyItem : MonoBehaviour
         }
     }
 
+
+
+ 	private IEnumerator CheckInput()
+    		{
+        		while (playerInRange)
+        		{
+            			if (Input.GetButtonDown("Interact"))
+            			{
+                			Debug.Log("Press Interact.");
+					if (inv.money >= type.price)
+					{
+                				inv.takeMoney(type.price);
+                				inv.AddItem(type);
+                				Destroy(gameObject);
+					}
+					else
+					{
+			    			Debug.Log("Not enough money");
+					}
+            			}
+            		yield return null;
+       			}
+    		}
+
+}
+
+
+
+
+/*
     private IEnumerator CheckInput()
     {
         while (playerInRange)
@@ -42,8 +72,8 @@ public class BuyItem : MonoBehaviour
             yield return null;
         }
     }
-}
 
+*/
 
 /*
 using System.Collections;
