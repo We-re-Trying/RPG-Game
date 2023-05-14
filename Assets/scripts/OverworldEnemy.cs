@@ -5,7 +5,7 @@ using UnityEngine;
 public class OverworldEnemy : MonoBehaviour
 {
     public Rigidbody2D rb;
-    
+    public Animator animator;
 
     public enum State { Idle, Move };
     public State currentState;
@@ -18,9 +18,12 @@ public class OverworldEnemy : MonoBehaviour
     public float timeBetweenDirectionChanges = 2f;
     private float lastChange = 3f;
 
+    private int lastXDirection = 1;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
 
         randomDirection();
         direction.Normalize();
@@ -36,8 +39,10 @@ public class OverworldEnemy : MonoBehaviour
         switch (currentState)
         {
             case State.Idle:
+                animator.SetTrigger("Idle");
                 break;
             case State.Move:
+                animator.SetTrigger("Moving");
                 if (Time.time - lastChange > timeBetweenDirectionChanges)
                 {
                     randomDirection();
@@ -66,6 +71,7 @@ public class OverworldEnemy : MonoBehaviour
                     break;
                 case 2:
                     currentState = State.Move;
+                    
                     break;
             }
             lastChoice = Time.time;
@@ -79,17 +85,22 @@ public class OverworldEnemy : MonoBehaviour
         {
             case 1:
                 direction = new Vector3(0f, 1f, 0f);
+                
                 break;
             case 2:
                 direction = new Vector3(1f, 0f, 0f);
+                lastXDirection = 1;
                 break;
             case 3:
                 direction = new Vector3(0f, -1f, 0f);
                 break;
             case 4:
                 direction = new Vector3(-1f, 0f, 0f);
+                lastXDirection = -1;
                 break;
         }
+
+        animator.SetFloat("Direction", lastXDirection);
     }
 
     private void OnCollisionEnter2D(Collision2D col)

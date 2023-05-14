@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3333166300577140445}
   - component: {fileID: 3333166300577140444}
   - component: {fileID: 3333166300577140435}
+  - component: {fileID: 6222951523388242631}
   m_Layer: 0
   m_Name: GOOP
   m_TagString: Untagged
@@ -152,3 +153,23 @@ MonoBehaviour:
   speed: 1
   timeBetweenChoices: 2
   timeBetweenDirectionChanges: 2
+--- !u!95 &6222951523388242631
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3333166300577140434}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5532d52fc8934104f86aba2fe8bef98c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0

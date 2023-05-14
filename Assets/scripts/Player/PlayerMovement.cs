@@ -28,7 +28,7 @@ public class PlayerMovement : MonoBehaviour
     public int exp;
     public int expThreshold = 100;
     public int healthIncrease = 5;
-    public int strIncrease = 1;
+    //public int strIncrease = 1;
 
     public int gold;
 
@@ -142,11 +142,16 @@ public class PlayerMovement : MonoBehaviour
 
     public void levelUp()
     {
-        maxHealth += healthIncrease;
-        str += strIncrease;
+        maxHealth += healthIncrease; // increase only hp, str gets increased from guy
+        // str += strIncrease;
 
         // Get leftover exp to keep towards next level up
         exp -= expThreshold;
+    }
+
+    public void strUp(int amount)
+    {
+        str += amount;
     }
 
     public void animate()

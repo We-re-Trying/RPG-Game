@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &43117446 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6166040262715697210, guid: baf195085d7c8234f81a111cf127b2f6, type: 3}
+  m_PrefabInstance: {fileID: 6166040262936711238}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &122907229
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -417,7 +422,7 @@ PrefabInstance:
     - target: {fileID: 8234421604011645848, guid: bdc3e73876862a64ea09885c59c08590, type: 3}
       propertyPath: mainCamera
       value: 
-      objectReference: {fileID: 2079629648}
+      objectReference: {fileID: 43117446}
     - target: {fileID: 8234421604011645851, guid: bdc3e73876862a64ea09885c59c08590, type: 3}
       propertyPath: m_Name
       value: Lucia (1)
@@ -94432,7 +94437,7 @@ PrefabInstance:
     - target: {fileID: 335627278848396151, guid: ab6cd71dd957f1648bb0d0874a81032c, type: 3}
       propertyPath: mainCamera
       value: 
-      objectReference: {fileID: 1539307859}
+      objectReference: {fileID: 43117446}
     - target: {fileID: 335627278848396152, guid: ab6cd71dd957f1648bb0d0874a81032c, type: 3}
       propertyPath: m_RootOrder
       value: 10
