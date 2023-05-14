@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
-
+using TMPro;
 public class Inventory : MonoBehaviour
 {
     //public List<ItemBase> slots;
@@ -15,6 +15,12 @@ public class Inventory : MonoBehaviour
     public string water = "Water";
     public string yeast = "Yeast";
 
+    public TextMeshProUGUI goldAmount;
+
+    private void Start()
+    {
+        setGoldAmount();
+    }
     public void AddItem(string itemName)
     {
         inventory.Add(itemName);
@@ -39,11 +45,13 @@ public class Inventory : MonoBehaviour
     public void addMoney(int price)
      {
 	     gold += price;
+        setGoldAmount();
      }
 
 	public void takeMoney(int price)
     {
 	    gold -= price;
+        setGoldAmount();
     }
 
     public void useItem(string itemName, GameObject itemUser)
@@ -64,7 +72,14 @@ public class Inventory : MonoBehaviour
             itemUser.GetComponent<PlayerMovement>().healByAmount(30);
         }
     }
+
+    public void setGoldAmount()
+    {
+        goldAmount.text = "Gold: " + gold.ToString();
+    }
 }
+
+
 
 /*
 public class ItemSlot
