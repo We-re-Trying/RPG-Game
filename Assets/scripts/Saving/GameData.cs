@@ -5,13 +5,14 @@ using UnityEngine;
 [System.Serializable]
 public class GameData
 {
-    //public Inventory inventory;
+    //public List<string> inventory;
     public int partyGold, currentFloor;
     public int maxLevel, maxExp, maxMaxHealth, maxCurrentHealth, maxStr,
                luciaLevel, luciaExp, luciaMaxHealth, luciaCurrentHealth, luciaStr;
     
     public GameData()
     {
+        //inventory = new List<string>();
         this.partyGold = 0; this.currentFloor = 2; // First level is 2, Yeaston is 1
         this.maxLevel = 1; this.maxExp = 0; this.maxMaxHealth = 20;
         this.maxCurrentHealth = 20; this.maxStr = 1;

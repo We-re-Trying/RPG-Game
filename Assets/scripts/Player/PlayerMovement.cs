@@ -117,6 +117,19 @@ public class PlayerMovement : MonoBehaviour
         } */
     }
 
+    public void healByAmount(int amount)
+    {
+        if ((currentHealth + amount) >= maxHealth)
+        {
+            currentHealth = maxHealth;
+        }
+        else
+        {
+            currentHealth += amount;
+        }
+        healthBar.SetHealth(currentHealth);
+    }
+
     public void addExp(int expGains)
     {
         exp += expGains;

@@ -5,7 +5,9 @@ using UnityEngine;
 public class BuyItem : MonoBehaviour
 {
     public Inventory inv;
-    public ItemBase type;
+    //public ItemBase type;
+    public string itemName;
+    public int price;
 
     private bool playerInRange = false;
     private Coroutine checkInputCoroutine;
@@ -36,11 +38,11 @@ public class BuyItem : MonoBehaviour
         		{
             			if (Input.GetButtonDown("Interact"))
             			{
-                			Debug.Log("Press Interact.");
-					if (inv.money >= type.price)
+                			//Debug.Log("Press Interact.");
+					if (inv.gold >= price)
 					{
-                				inv.takeMoney(type.price);
-                				inv.AddItem(type);
+                				inv.takeMoney(price);
+                				inv.AddItem(itemName);
                 				Destroy(gameObject);
 					}
 					else
