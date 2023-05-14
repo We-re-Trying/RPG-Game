@@ -41,7 +41,7 @@ public class PlayerMovement : MonoBehaviour
 
         // Probably need to change these for scene transitions
         currentHealth = maxHealth;
-        //healthBar.SetMaxHealth(maxHealth);
+        healthBar.SetMaxHealth(maxHealth);
     }
 
     private void OnEnable()
@@ -177,5 +177,11 @@ public class PlayerMovement : MonoBehaviour
     {
         //Debug.Log("isAttackingOff()");
         isAttacking = false;
+    }
+
+    public void refillHealth()
+    {
+        currentHealth = maxHealth;
+        healthBar.SetHealth(currentHealth);
     }
 }
