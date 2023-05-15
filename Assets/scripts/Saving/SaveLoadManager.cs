@@ -14,7 +14,18 @@ public class SaveLoadManager : MonoBehaviour
     public void newGame()
     {
         Debug.Log("Loading new game.");
-        this.gameData = new GameData();                      
+
+        this.gameData = new GameData();
+        string statsFile = Application.persistentDataPath + "/savedGame.json";
+        if (File.Exists(statsFile))
+        {
+            File.Delete(statsFile);
+        }
+        string inventoryFile = Application.persistentDataPath + "/inventory.txt";
+        if (File.Exists(inventoryFile))
+        {
+            File.Delete(inventoryFile);
+        }
     }    
 
     public void saveGame()

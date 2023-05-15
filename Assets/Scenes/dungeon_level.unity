@@ -94412,6 +94412,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4167070584830187317, guid: 072f7373792356c48a0f830aa4226fb8, type: 3}
+      propertyPath: sl
+      value: 
+      objectReference: {fileID: 164997699}
+    - target: {fileID: 4167070584830187317, guid: 072f7373792356c48a0f830aa4226fb8, type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 335563700}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 072f7373792356c48a0f830aa4226fb8, type: 3}
 --- !u!1001 &1835353811
@@ -107208,7 +107216,6 @@ GameObject:
   - component: {fileID: 2015024530}
   - component: {fileID: 2015024529}
   - component: {fileID: 2015024528}
-  - component: {fileID: 2015024527}
   m_Layer: 5
   m_Name: Dungeon Entrance
   m_TagString: Untagged
@@ -107216,20 +107223,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2015024527
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2015024526}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e88cb3d88acb4614197c4c537ae1a074, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameManager: {fileID: 0}
-  sl: {fileID: 0}
 --- !u!61 &2015024528
 BoxCollider2D:
   m_ObjectHideFlags: 0
