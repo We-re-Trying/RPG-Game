@@ -46,7 +46,13 @@ public class PlayerMovement : MonoBehaviour
 
         // Probably need to change these for scene transitions
         currentHealth = maxHealth;
-        healthBar.SetMaxHealth(maxHealth);
+        if (healthBar != null)
+        {
+            healthBar.SetMaxHealth(maxHealth);
+        }
+        else Debug.Log("healthBar not found.");
+        setLevel();
+        setStrength();
     }
 
     private void OnEnable()
@@ -147,6 +153,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void levelUp()
     {
+        level += 1;
         maxHealth += healthIncrease; // increase only hp, str gets increased from guy
         // str += strIncrease;
 
@@ -164,13 +171,13 @@ public class PlayerMovement : MonoBehaviour
 
     public void setLevel()
     {
-        Level.text = "Level: " + Level.ToString();
+        Level.text = "Level: " + level.ToString();
 
     }
 
     public void setStrength()
     {
-        Strength.text = "Strength: " + Strength.ToString();
+        Strength.text = "Strength: " + str.ToString();
     }
 
     public void animate()
