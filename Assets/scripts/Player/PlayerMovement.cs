@@ -34,6 +34,9 @@ public class PlayerMovement : MonoBehaviour
 
     public int gold;
 
+    public TextMeshProUGUI Level;
+    public TextMeshProUGUI Strength;
+
     private float moveHorizontal, moveVertical;
     Vector2 currentVelocity;
 
@@ -149,11 +152,25 @@ public class PlayerMovement : MonoBehaviour
 
         // Get leftover exp to keep towards next level up
         exp -= expThreshold;
+
+        setLevel();
     }
 
     public void strUp(int amount)
     {
         str += amount;
+        setStrength();
+    }
+
+    public void setLevel()
+    {
+        Level.text = "Level: " + Level.ToString();
+
+    }
+
+    public void setStrength()
+    {
+        Strength.text = "Strength: " + Strength.ToString();
     }
 
     public void animate()
