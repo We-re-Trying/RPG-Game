@@ -68,6 +68,18 @@ public class SaveLoadManager : MonoBehaviour
             lucia.exp = gameData.luciaExp; lucia.maxHealth = gameData.luciaMaxHealth;
             lucia.currentHealth = gameData.luciaCurrentHealth; lucia.str = gameData.luciaStr; lucia.level = gameData.luciaLevel;
         }
+        else
+        {
+            Debug.Log("Stats not found. Loading base stats.");
+            gameData = new GameData();
+
+            inventory.gold = gameData.partyGold;
+            gameManager.currentFloor = gameData.currentFloor;
+            max.level = gameData.maxLevel; max.exp = gameData.maxExp; max.maxHealth = gameData.maxMaxHealth;
+            max.currentHealth = gameData.maxCurrentHealth; max.str = gameData.maxStr;
+            lucia.exp = gameData.luciaExp; lucia.maxHealth = gameData.luciaMaxHealth;
+            lucia.currentHealth = gameData.luciaCurrentHealth; lucia.str = gameData.luciaStr; lucia.level = gameData.luciaLevel;
+        }
     }
 
     public void saveInventory()
@@ -92,6 +104,12 @@ public class SaveLoadManager : MonoBehaviour
             List<string> loadedStrings = new List<string>(File.ReadAllLines(filePath));
             inventory.inventory = loadedStrings;
             reader.Close();
+        }
+        else
+        {
+            Debug.Log("Inventory not found. Creating emtpy inventory.txt");
+            string path = Path.Combine(Application.persistentDataPath, "inventory.txt");
+            File.Create(path);
         }
     }
 
