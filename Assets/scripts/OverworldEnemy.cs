@@ -121,8 +121,6 @@ public class OverworldEnemy : MonoBehaviour
             if (col.gameObject.CompareTag("Player Attack"))
             {
                 Debug.Log("I got attacked!");
-                // Player Movement switches to battle scene
-                
             }
         }
     }

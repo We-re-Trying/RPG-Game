@@ -117,22 +117,6 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    public void switchToBattle()
-    {
-        gameObject.GetComponent<BoxCollider2D>().isTrigger = true;
-        gameObject.GetComponent<PartnerFollow>().enabled = false;
-        gameObject.GetComponent<PlayerMovement>().enabled = false;
-        mainCamera.GetComponent<MainCamera>().player = gameObject;
-    }
-
-    // Disable Controls
-    public void DisableControls()
-    {
-        gameObject.GetComponent<BoxCollider2D>().isTrigger = true;
-        gameObject.GetComponent<PartnerFollow>().enabled = false;
-        gameObject.GetComponent<PlayerMovement>().enabled = false;
-    }
-
     public void takeDamage(int damage)
     {
         currentHealth -= damage;
