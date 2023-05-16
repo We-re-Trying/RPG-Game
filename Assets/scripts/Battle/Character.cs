@@ -6,6 +6,11 @@ public class Character : MonoBehaviour
 {
     private TurnManager turnManager;
 
+    private void setTurnManager()
+    {
+        turnManager = gameObject.GetComponent<TurnManager>();
+    }
+
     private void Start()
     {
         turnManager = FindObjectOfType<TurnManager>();
