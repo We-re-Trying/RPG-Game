@@ -78,7 +78,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        if (isBattle)
+        if (!isBattle)
         {
             if (!isAttacking)
             {
@@ -130,7 +130,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void switchControl()
     {
-        if (Input.GetButtonDown("Fire2") && !isBattle)
+        if (Input.GetButtonDown("Fire2"))
         {
             partner.GetComponent<PartnerFollow>().enabled = false;
             partner.GetComponent<PlayerMovement>().enabled = true;
@@ -138,17 +138,8 @@ public class PlayerMovement : MonoBehaviour
             gameObject.GetComponent<PartnerFollow>().enabled = true;
             gameObject.GetComponent<PlayerMovement>().enabled = false;
         }
-        // else check isBattle and check TurnManager for current turn
 
 
-        else if(isBattle /*Check for current turn*/)
-        {
-            partner.GetComponent<PartnerFollow>().enabled = false;
-            partner.GetComponent<PlayerMovement>().enabled = true;
-            mainCamera.GetComponent<MainCamera>().player = partner;
-            gameObject.GetComponent<PartnerFollow>().enabled = true;
-            gameObject.GetComponent<PlayerMovement>().enabled = false;
-        }
     }
 
     public void takeDamage(int damage)
