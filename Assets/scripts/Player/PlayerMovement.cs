@@ -41,9 +41,19 @@ public class PlayerMovement : MonoBehaviour
     private float moveHorizontal, moveVertical;
     Vector2 currentVelocity;
 
+    private int currentTurn = 0;
+
+ 
+
     private void setIsBattle()
     {
         isBattle = gameObject.GetComponent<GameManager>().isBattle;
+        Debug.Log("this is a battle");
+    }
+
+    private void setCurrentTurn()
+    {
+        currentTurn = gameObject.GetComponent<TurnManager>().getCurrentTurn();
     }
 
     private void Start()
@@ -68,21 +78,28 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        if (!isAttacking)
+        if (isBattle)
         {
-            moveHorizontal = Input.GetAxisRaw("Horizontal");
-            moveVertical = Input.GetAxisRaw("Vertical");
+            if (!isAttacking)
+            {
+                moveHorizontal = Input.GetAxisRaw("Horizontal");
+                moveVertical = Input.GetAxisRaw("Vertical");
+            }
+            else
+            {
+                moveHorizontal = 0f;
+                moveVertical = 0f;
+            }
+
+
+            attack();
+            switchControl();
+            animate();
         }
         else
         {
-            moveHorizontal = 0f;
-            moveVertical = 0f;
+
         }
-
-
-        attack();
-        switchControl();
-        animate();
     }
 
     void FixedUpdate()
@@ -113,7 +130,18 @@ public class PlayerMovement : MonoBehaviour
 
     public void switchControl()
     {
-        if (Input.GetButtonDown("Fire2"))
+        if (Input.GetButtonDown("Fire2") && !isBattle)
+        {
+            partner.GetComponent<PartnerFollow>().enabled = false;
+            partner.GetComponent<PlayerMovement>().enabled = true;
+            mainCamera.GetComponent<MainCamera>().player = partner;
+            gameObject.GetComponent<PartnerFollow>().enabled = true;
+            gameObject.GetComponent<PlayerMovement>().enabled = false;
+        }
+        // else check isBattle and check TurnManager for current turn
+
+
+        else if(isBattle /*Check for current turn*/)
         {
             partner.GetComponent<PartnerFollow>().enabled = false;
             partner.GetComponent<PlayerMovement>().enabled = true;
