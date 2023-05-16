@@ -94574,7 +94574,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1345467162446379570, guid: 34743c988619b7541a3ecd97ef2d81ae, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 637.55994
+      value: 560
       objectReference: {fileID: 0}
     - target: {fileID: 1345467162446379570, guid: 34743c988619b7541a3ecd97ef2d81ae, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -94624,6 +94624,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1848595585}
     m_Modifications:
+    - target: {fileID: 919052598857912794, guid: 0dd7ac12a66b08848947b2109147c41c, type: 3}
+      propertyPath: m_margin.y
+      value: -5.3773155
+      objectReference: {fileID: 0}
     - target: {fileID: 919052598857912794, guid: 0dd7ac12a66b08848947b2109147c41c, type: 3}
       propertyPath: m_fontColor.b
       value: 0.44705883
@@ -94722,7 +94726,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2363675345789502321, guid: 0dd7ac12a66b08848947b2109147c41c, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 587.5599
+      value: 502
       objectReference: {fileID: 0}
     - target: {fileID: 2363675345789502321, guid: 0dd7ac12a66b08848947b2109147c41c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -95160,7 +95164,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7082476035250896194, guid: 9621f41279077984d907d0b8693552f1, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 528.9
+      value: 451
       objectReference: {fileID: 0}
     - target: {fileID: 7082476035403690036, guid: 9621f41279077984d907d0b8693552f1, type: 3}
       propertyPath: m_AnchorMax.x
