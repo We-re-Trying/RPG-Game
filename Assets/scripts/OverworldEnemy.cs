@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class OverworldEnemy : MonoBehaviour
 {
@@ -121,6 +122,7 @@ public class OverworldEnemy : MonoBehaviour
             if (col.gameObject.CompareTag("Player Attack"))
             {
                 Debug.Log("I got attacked!");
+                SceneManager.LoadScene("dungeon_battle");
             }
         }
     }

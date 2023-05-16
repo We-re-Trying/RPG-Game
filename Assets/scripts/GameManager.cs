@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    public bool isBattle = false;
     public int currentFloor = 2;
     public SaveLoadManager sl;
     public PlayerMovement max, lucia;

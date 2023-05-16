@@ -17,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private GameObject mainCamera;
 
+    public bool isBattle = false;
     public bool isAttacking = false;
     private Collider2D hitBox;
     public Vector2 hitBoxSize = new Vector2(.5f, .5f), hitBoxLocation;
@@ -39,6 +40,11 @@ public class PlayerMovement : MonoBehaviour
 
     private float moveHorizontal, moveVertical;
     Vector2 currentVelocity;
+
+    private void setIsBattle()
+    {
+        isBattle = gameObject.GetComponent<GameManager>().isBattle;
+    }
 
     private void Start()
     {
