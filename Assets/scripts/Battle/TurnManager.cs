@@ -10,7 +10,7 @@ public class TurnManager : MonoBehaviour
     public void StartBattle() {
         currentTurn = 0;
         // Perform any other necessary initialization steps
-
+        
         // Call the first character's turn
         characters[currentTurn].StartTurn();
     }
